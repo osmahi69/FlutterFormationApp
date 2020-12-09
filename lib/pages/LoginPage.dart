@@ -3,6 +3,13 @@ import 'dart:developer';
 
 import 'ListPage.dart';
 
+class EmailFieldValidator {
+  static String validate(String value) {
+    return value.isEmpty ? 'Email can\'t be empty' : null;
+  }
+}
+
+
 class LoginPage extends StatelessWidget {
   String mail= "";
   String pass= "";
@@ -17,7 +24,7 @@ class LoginPage extends StatelessWidget {
         child:Column(
           children: <Widget>[
             _buildHeader(),
-            SizedBox(height: 10),
+            SizedBox(height: 15),
             _buildTitle(),
             SizedBox(height: 15),
             _buildForm(context)
@@ -54,6 +61,7 @@ class LoginPage extends StatelessWidget {
             child: TextFormField(
               // Récupérer email rentré par utilisateur 
               onChanged: (newText) {mail = newText;},
+              validator: EmailFieldValidator.validate,
               decoration: InputDecoration(
                 labelText: "Votre email..."
               )

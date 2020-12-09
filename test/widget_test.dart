@@ -7,8 +7,13 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:TestApp/pages/LoginPage.dart';
 
-import 'package:TestApp/main.dart';
 
 void main() {
+  test('empty email return error string', () {
+  var result = EmailFieldValidator.validate('');
+  expect(result, 'Email can\'t be empty');
+
+  });
 }
