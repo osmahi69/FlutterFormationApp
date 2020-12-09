@@ -17,7 +17,7 @@ class LoginPage extends StatelessWidget {
         child:Column(
           children: <Widget>[
             _buildHeader(),
-            SizedBox(height: 10),
+            SizedBox(height: 15),
             _buildTitle(),
             SizedBox(height: 15),
             _buildForm(context)
