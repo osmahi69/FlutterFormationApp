@@ -16,4 +16,9 @@ void main() {
   expect(result, 'Email can\'t be empty');
 
   });
+  test('non empty email return null', () {
+  var result = EmailFieldValidator.validate('email');
+  expect(result, null);
+
+  });
 }
