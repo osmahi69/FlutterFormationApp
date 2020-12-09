@@ -13,7 +13,7 @@ class LoginPage extends StatelessWidget {
         title: Text("Page de login"),
         centerTitle: true,
       ),
-      body: Container(
+      body: SingleChildScrollView(
         child:Column(
           children: <Widget>[
             _buildHeader(),
@@ -74,7 +74,7 @@ class LoginPage extends StatelessWidget {
               child: Text("login"),
               color: Colors.red,
               onPressed: () {
-                if(mail == "123") {
+                if(mail == "demo@gmail.com" && pass == "demo") {
                  Navigator.push(context, MaterialPageRoute(builder: (context) => ListPage()));
                }
                else {

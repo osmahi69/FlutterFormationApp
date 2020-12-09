@@ -32,7 +32,7 @@ class _ListPageState extends State<ListPage> {
             subtitle: Row(
               children: [
                 Text("19.99€ - 4.5"),
-                Icon(Icons.star, size: 12,)
+                Icon(Icons.star, size: 12)
               ],
           ),
         )
