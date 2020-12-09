@@ -3,7 +3,7 @@ import 'dart:developer';
 
 import '../Cours.dart';
 //
-final crs = List<Cours>.generate(10, (i) => Cours("Cours logiciel $i", "description", "https://www.alain-bensoussan.com/wp-content/uploads/46763381.jpg"));
+final crs = List<Cours>.generate(4, (i) => Cours("Cours logiciel $i", "description", "imagesFormations/$i.png"));
 
  class ListPage extends StatefulWidget {
   ListPage({Key key}) : super(key: key);
@@ -27,7 +27,9 @@ class _ListPageState extends State<ListPage> {
           child: ListTile(
             onTap: () {
             },
-            leading: Image.network(cours.image),
+            leading: Image(
+              image:AssetImage(cours.image)
+            ),
             title: Text(cours.name),
             subtitle: Row(
               children: [
