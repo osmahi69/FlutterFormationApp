@@ -1,3 +1,4 @@
+import 'package:TestApp/pages/InfoPage.dart';
 import 'package:flutter/material.dart';
 import 'dart:developer';
 
@@ -26,10 +27,12 @@ class _ListPageState extends State<ListPage> {
           height: 70,
           child: ListTile(
             onTap: () {
-            },
-            leading: Image(
-              image:AssetImage(cours.image)
-            ),
+              // Navigate to cours page details
+              Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => InfoPage(cours: cours)),
+              );},
+            leading: Image.asset(cours.image),
             title: Text(cours.name),
             subtitle: Row(
               children: [
